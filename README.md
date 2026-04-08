@@ -120,7 +120,7 @@ Interactive Dashboard (Streamlit UI)
    - Location Analysis Images
 
 **First Page UI Image**
-![Dashboard](image/Dashboard/First_page_dashboard.png)
+![Dashboard](Image/Dashboard_image/First_page_dashboard.png)
 
 I have shared this UI to show you the **filter** I have used also the **KPIs** shows the **total revenues, transaction count and Average Order value** 
 
@@ -129,28 +129,28 @@ I have shared this UI to show you the **filter** I have used also the **KPIs** s
 **Sales Trends**
 
 *Daily Trends*
-![Dashboard](image/Dashboard/Daily_trends.png)
+![Dashboard](Image/Dashboard_image/Daily_trends.png)
 
 Area chart display the fluctuation of daily sales trend help to see increasing and secreasing of sales over a month.
 
 ---
 
 *Weekly Trend*
-![Dashboard](image/Dashboard/Weekly_trend.png)
+![Dashboard](Image/Dashboard_image/Weekly_trend.png)
 
 This Bar chart display the weekly trends. somewhere there is a decreasing of sales because of weekend and feb month (having 28 days) but as we see there is a increasing revenue month after month.
 
 ---
 
 *Monthly Trend*
-![Dashboard](image/Dashboard/monthly_trend.png)
+![Dashboard](Image/Dashboard_image/monthly_trend.png)
 
 As we have already discussed then month after month the sales is in increasing order. In Monthly chart we can see bar in going in upward direction
 
 ---
 
 *Store-level comparison*
-![Dashboard](image/Dashboard/store_comparison.png)
+![Dashboard](Image/Dashboard_image/store_comparison.png)
 
 Line charts compare the revenue across the stores on daily. Based on Store performance the Hell’s Kitchen have a highest revenue whereas second highest store is Astoria then Lower Manhattan.
 It is useful for dectecing the  **High-Performaning** and **Under-Performaning** location.
@@ -158,15 +158,15 @@ It is useful for dectecing the  **High-Performaning** and **Under-Performaning**
 ---
 
 *Day of week performance*
-![Dashboard](image/Dashboard/days_trends.png)
-![Dashboard](image/Dashboard/days_trends_data.png)
+![Dashboard](Image/Dashboard_image/days_trends.png)
+![Dashboard](Image/Dashboard_image/days_trends_data.png)
 
 Compare the days revenue in which day sales can increase. On **Tuesday** the highest sales than other. If we see their is a slightly less sales rather than tuseday.
 
 ---
 
 *Week vs Weekend Comparison*
-![Dashboard](image/Dashboard/Week_vs_weekend.png)
+![Dashboard](Image/Dashboard_image/Week_vs_weekend.png)
 
 This chart compare the weekday and weekend sales. As we can observed, our workday’s revenue is highest than the leisure day which is (Saturday & Sunday).
 **Help optimizing staffing and inventory**
@@ -174,7 +174,7 @@ This chart compare the weekday and weekend sales. As we can observed, our workda
 ---
 
 *Workday and leisure day*
-![Dashboard](image/Dashboard/work_leisure.png)
+![Dashboard](Image/Dashboard_image/work_leisure.png)
 
 We have already compare the week vs weekend sales. so our workday create a more revenue than leisure day.
 This is helpful for staffing and inventory.
@@ -182,18 +182,18 @@ This is helpful for staffing and inventory.
 ---
 
 *Houry demands*
-![Dashboard](image/Dashboard/Hourly_trend.png)
+![Dashboard](Image/Dashboard_image/Hourly_trend.png)
 
 This is Hourly line chart to identify the peak hour as shown in diagram, at 10am there is a high frequency of sales is in morning.
 
-![Dashboard](image/Dashboard/peak_peakoff.png)
+![Dashboard](Image/Dashboard_image/peak_peakoff.png)
 
 From Hourly analysis chart we can cleared that 10:00AM is a peak hour sales for all three stores and peakoff hours is in midday  (afternoon) around 12PM.
 
 ---
 
 *Hourly revenue per store*
-![Dashboard](image/Dashboard/store_heatmap.png)
+![Dashboard](Image/Dashboard_image/store_heatmap.png)
 
 This visualization express the demand intensity. At what time will be high sales. As per visual observation in every store at 10am is a peak hour where customer visit in coffee store.
 
@@ -201,7 +201,7 @@ This visualization express the demand intensity. At what time will be high sales
 
 *Location specified customer behavior insight*
 
-![Dashboard](image/Dashboard/customer_behavior_insight.png)
+![Dashboard](Image/Dashboard_image/customer_behavior_insight.png)
 
 More customer visit after 9:30am and start more sales at peak hour, which is 10am. For all three stores same peak hour is 10am but customer traffic is different for stores. As we have visualized traffic store, at top Hell’s kitchen is high traffic store than other stores and moderate level is Astoria and Lower Manhattan. More sales done through Hell’s Kitchen store based on area or quality.
 
