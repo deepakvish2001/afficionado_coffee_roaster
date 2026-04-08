@@ -87,7 +87,7 @@ st.title("AFFACIONADO COFFEE ROASTER :coffee:")
 st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
 
 #Filter
-st.sidebar.image("image/ACR-Shopify-Logo.png",use_container_width= True)
+st.sidebar.image("Image/ACR_Shopify_Logo.png",use_container_width= True)
 st.sidebar.markdown("_____")
 st.sidebar.header("CHOOSE FILTERS")
 location = st.sidebar.multiselect("Store Location",df['store_location'].unique(),default=df['store_location'].unique())
