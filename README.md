@@ -211,7 +211,7 @@ More customer visit after 9:30am and start more sales at peak hour, which is 10a
 
 **To watch the full dynamic Dashboard click on below link**
 Afficionado Coffee Roaster Dashboard
-- [Open Dashboard]()
+- [Open Dashboard](https://afficionadocoffeeroaster.streamlit.app/)
 
 ---
 
