@@ -91,7 +91,7 @@ st.sidebar.image("Image/ACR_Shopify_Logo.png",use_container_width= True)
 st.sidebar.markdown("_____")
 st.sidebar.header("CHOOSE FILTERS")
 location = st.sidebar.multiselect("Store Location",df['store_location'].unique(),default=df['store_location'].unique())
-days = st.sidebar.multiselect("Days of week",df['weekday'].unique(), default=df['weekday'].unique())
+days = st.sidebar.multiselect("Days of Week",df['weekday'].unique(), default=df['weekday'].unique())
 hours = st.sidebar.slider('Hours Range',0,23,(0,23))
 metric = st.sidebar.radio("Metric",['revenue', 'transaction_qty'], format_func=lambda x: x.replace("_", " ").title())
 
@@ -234,7 +234,7 @@ with tab2:
         csv = weekly_perform.to_csv(index=False).encode('utf-8')
         st.download_button("Dowload",data=csv,file_name="weekly revenue.csv",mime="text/csv",help= "Click here to download the CSV file")
 
-    st.header(f"Week vs Weekend comparison")
+    st.header(f"Week vs Weekend Comparison")
     week_weekend = get_week_weekend(filtered_df)
     fig6 = px.bar(week_weekend, x='week', y=metric, labels={'week':'Week vs Weekend', metric: 'Revenue' if metric=='revenue' else 'Transaction'})
     fig6.update_layout(**afficionado_theme)
@@ -243,12 +243,12 @@ with tab2:
                        marker_line_width=1)  
     st.plotly_chart(fig6,use_container_width=True,key="fig6")
 
-    with st.expander("Weekly trends data"):
+    with st.expander("Weekly Trends Data"):
         st.write(week_weekend.style.background_gradient(cmap="Blues"))
         csv = week_weekend.to_csv(index=False).encode('utf-8')
         st.download_button("Dowload",data=csv,file_name="week weekend.csv",mime="text/csv",help= "Click here to download the CSV file")
 
-    st.header(f"Interpret behaviour of {metric.replace('_',' ').title()} on Workday & Leisure")
+    st.header(f"Interpret Behaviour of {metric.replace('_',' ').title()} on Workday & Leisure")
     insights = interpret_behaviour(filtered_df)
     for i in insights:
         st.info(i)
@@ -265,19 +265,19 @@ with tab3:
     st.plotly_chart(fig7,use_container_width=True,key="fig7")
 
     col1 = st.columns(1)
-    with st.expander("Hour analysis data"):
+    with st.expander("Hour Analysis Data"):
         st.write(hour_analysis.style.background_gradient(cmap="Blues"))
         csv =hour_analysis.to_csv(index=False).encode('utf-8')
         st.download_button("Download",data=csv,file_name="hourly_analysis.csv",mime="text/csv",help="Click here to download the csv file")
 
     col1 = st.columns(1)
-    st.success(f"Morning Rush hour: {insight['morning_revenue_hour']}:00")
-    st.info(f"Midday slow period: {insight['midday_revenue_hour']}:00")
+    st.success(f"Morning Rush Hour: {insight['morning_revenue_hour']}:00")
+    st.info(f"Midday Slow Period: {insight['midday_revenue_hour']}:00")
     st.success(f"Evening Peak: {insight['evening_revenue_hour']}:00")
 
 with tab4:
     col1 =st.columns(1)
-    st.header("Hourly heatmap per store")
+    st.header("Hourly Heatmap per Store")
     hourly_heatmap = get_hourly_heatmap(filtered_df)
     heatmap_pivot = hourly_heatmap.pivot(index='store_location', columns='hour', values=metric).fillna(0)
     fig8 = px.imshow(heatmap_pivot,aspect='auto',title="Hourly Demand Heatmap",color_continuous_scale='YlOrBr',labels={'store_location': 'Store','hour':'Hour'})
@@ -293,7 +293,7 @@ with tab4:
     col1 = st.columns(1)
 
     peak_per_store = hourly_heatmap.loc[hourly_heatmap.groupby('store_location')[metric].idxmax()].reset_index()
-    st.header("Peak Hour alignment or divergence across locations")
+    st.header("Peak Hour Alignment or Divergence across Locations")
     st.dataframe(peak_per_store[['store_location','hour', metric]])
 
     unique_peak_hours = peak_per_store['hour'].nunique()
@@ -331,8 +331,8 @@ with tab4:
     #     st.success("All stores are aligned")
 
     col1 = st.columns(1)
-    st.header("Location specificed customers behaviour insight")
-    st.subheader("Store behaviour on hour")
+    st.header("Location specificed Customers Behaviour Insight")
+    st.subheader("Store Behaviour on Hour")
     customer_behaviour = customer_insight(filtered_df)
     if not customer_behaviour:
         st.warning("No data available for select filter")
@@ -341,7 +341,7 @@ with tab4:
             st.info(customer_insights)
 
     col1 =st.columns(1)
-    st.subheader("High traffic store")
+    st.subheader("High Traffic Store")
     strength_map = store_strength(filtered_df)
     for store, strength in strength_map.items():
         st.info(f"{store}: {strength}")
